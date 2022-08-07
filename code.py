@@ -1,3 +1,5 @@
+import pydaisi as pyd
+guessing_game_ = pyd.Daisi("davisniranjan03/guessing game ")
 import tkinter as tk
 import math
 import fastguess
