@@ -19,8 +19,7 @@ title=tk.Label(window,text="GUESSING GAME",font=("Arial",45),fg="#373fad",bg="#a
 
 display = tk.Label(window,text = "Click on \"PLAY\" button to start a new game", font=("Arial", 10, "normal"),fg = "White", bg = "Black",justify=tk.LEFT)
 
-
-def yes():
+guessing_game_.yes().value
   global logs,count,guess,maxtries
   higher_button.config(state='disabled')
   lower_button.config(state='disabled')
@@ -50,8 +49,8 @@ def yes():
   file_handle.write(statnow)
   file_handle.close()
   update_result(display)
- 
-def play_game():
+  
+guessing_game_.play_game().value
   global max,maxtries,guess
   challenge_button.config(state='normal')
   max=int(number_form.get())
@@ -65,7 +64,7 @@ def play_game():
   challenge="I shall guess within{} tries.".format(maxtries)
   update_result(text="{} \n Click the \ 'CHALLENGE\'button to start the Game".format(challenge))
 
-def high():
+guessing_game_.high().value
     global count,guess,max,maxtries
     count+=1
     guess = fastguess.fguesser('h',max)
@@ -77,13 +76,14 @@ def high():
       display=("Guesses Left : {}\nIs it {}?".format((count_left),guess))
     update_result(display)
 
-def low():
+guessing_game_.low().value
     global count,guess,max,maxtries
     count+=1
     guess = fastguess.fguesser('l',max)
     display= ("Guesses Left : {}\nIs it{}?".format((maxtries-count),guess))
     update_result(display)  
-def new_game():
+
+guessing_game_.new_game().value    
   max_button.config(state='normal')
   number_form.config(state='normal')
   number_form.delete(0,"end")
@@ -93,9 +93,10 @@ def new_game():
   update_result(text="Please Enter the Maximum Value of your choice")
   max=number_form.get()
 
-def update_result(text):
+guessing_game_.update_result(text).value
   display.configure(text=text)
-def challenge():
+
+guessing_game_.challenge().value  
     global guess,count,maxtries
     higher_button.config(state='normal')
     lower_button.config(state='normal')
