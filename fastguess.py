@@ -1,4 +1,4 @@
-import main
+import code
 def fguesser(resp,max):
   if not hasattr(fguesser, "left"):
     # Minimum value
